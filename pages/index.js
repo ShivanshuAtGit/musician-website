@@ -1,9 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter, Aboreto } from "@next/font/google";
+import styles from "@/styles/Home.module.css";
+import videoLinks from "../src/configs/videoLinks";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
+const aboreto = Aboreto({ subsets: ["latin"], weight: "400" });
 
 export default function Home() {
   return (
@@ -15,109 +17,80 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.js</code>
-          </p>
-          <div>
+        <div className={styles.center}>
+          <div className={styles.leftBox}>
+            <h1 className={`${aboreto.className} ${styles.title}`}>
+              Bhajan Samrat{" "}
+            </h1>
+            <h2 className={`${aboreto.className} ${styles.name}`}>
+              Dharmendra Pandey
+            </h2>
+          </div>
+          <div className={styles.rightBox}>
+            <Image fill src="/hero-image.png" objectFit="contain" />
+          </div>
+        </div>
+
+        <div className={styles.videoSection}>
+          <h1 className={`${aboreto.className} ${styles.videoHeader}`}>
+            Mesmerizing Bhajan for "Aatmaranjan"
+          </h1>
+          <div className={styles.grid}>
+            {videoLinks.map((link) => (
+              <iframe
+                className={styles.videoFrame}
+                width="330"
+                height="250"
+                src={link}
+                frameborder="0"
+              ></iframe>
+            ))}
             <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+              href="https://www.youtube.com/@dharmendrapandeysultanpur/videos"
+              className={styles.card}
               target="_blank"
               rel="noopener noreferrer"
             >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
+              <h2 className={aboreto.className}>
+                See More <span>-&gt;</span>
+              </h2>
             </a>
           </div>
         </div>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
+        <footer className={styles.footer}>
+          <h2 className={aboreto.className}>Connect with us</h2>
+          <div>
+            <a
+              href="https://www.youtube.com/@dharmendrapandeysultanpur"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className={styles.socialIcons}>
+              <Image fill src="/youtube.png" />
+              </div>
+            </a>
+            <a
+              href="https://www.facebook.com/babadharmendrapandey"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className={styles.socialIcons}>
+              <Image fill src="/facebook.png" />
+              </div>
+            </a>
+            <a
+              href="https://www.instagram.com/dharmendra_pandey_7897/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className={styles.socialIcons}>
+              <Image fill src="/instagram.png" />
+              </div>
+            </a>
           </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
+        </footer>
       </main>
     </>
-  )
+  );
 }

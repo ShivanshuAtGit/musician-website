@@ -18,6 +18,9 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.center}>
+          <div className={styles.topBox}>
+            <Image fill src="/logo-shri.png" objectFit="contain" />
+          </div>
           <div className={styles.leftBox}>
             <h1 className={`${aboreto.className} ${styles.title}`}>
               Bhajan Samrat{" "}
@@ -67,7 +70,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <div className={styles.socialIcons}>
-              <Image fill src="/youtube.png" />
+                <Image fill src="/youtube.png" />
               </div>
             </a>
             <a
@@ -76,7 +79,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <div className={styles.socialIcons}>
-              <Image fill src="/facebook.png" />
+                <Image fill src="/facebook.png" />
               </div>
             </a>
             <a
@@ -85,11 +88,33 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <div className={styles.socialIcons}>
-              <Image fill src="/instagram.png" />
+                <Image fill src="/instagram.png" />
               </div>
             </a>
           </div>
         </footer>
+
+        <div className={styles.floatingButton}>
+          <a
+            href="tel:+917897217118"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className={styles.socialIcons}>
+              <Image fill src="/call.png" />
+            </div>
+          </a>
+          <div/>
+          <a
+            href="mailto:dharmendrapandit078@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className={styles.socialIcons}>
+              <Image fill src="/email.png" />
+            </div>
+          </a>
+        </div>
       </main>
     </>
   );

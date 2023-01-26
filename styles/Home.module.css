@@ -85,17 +85,15 @@
   box-shadow: inset 0px -60px 55px 20px white;
 }
 
-.leftBox {
-
-}
-
 .title {
-  font-size: 5rem;
+  font-size: 4.2rem;
   margin-bottom: 20px;
+  text-shadow: 2px 2px 7px #00000078;
 }
 
 .name {
-  font-size: 3rem;
+  font-size: 2.7rem;
+  text-shadow: 2px 2px 7px #00000078;
 }
 
 .rightBox {
@@ -103,6 +101,20 @@
   height: 600px;
   position: relative;
   z-index: -1;
+}
+
+.topBox {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 160px;
+  width: 20vw;
+  left: 0rem;
+  top: 5vh;
+}
+
+.rightBox img{
+  filter: blur(.5px);
 }
 
 .videoSection {
@@ -131,6 +143,15 @@
   transform: scale(1.01);
   box-shadow: -8px 8px 10px #00000038;
 }
+
+/* .center::before {
+  content: '';
+  background: rgba(255, 255, 255, 0.311);
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  position: absolute;
+} */
 
 
 /* .center::before {
@@ -221,6 +242,10 @@
   margin-top: 20px;
 }
 
+.footer h2 {
+  font-size: 1.2rem;
+}
+
 .socialIcons {
   height: 50px;
   width: 50px;
@@ -228,6 +253,24 @@
   position: relative;
   border-radius: 50%;
   margin: 10px
+}
+
+.floatingButton {
+  display: flex;
+  z-index: 10000;
+  height: 70px;
+  padding: 0 15px;
+  border-radius: 40px;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  box-shadow: 4px 4px 20px rgba(59, 59, 59, 0.472);
+}
+
+.floatingButton > div {
+  margin: 3px 5px;
+  border-left: 1px solid rgb(0, 0, 0);
 }
 
 /* Enable hover only on non-touch devices */
@@ -260,7 +303,6 @@
 
   .grid {
     grid-template-columns: 1fr;
-    margin-bottom: 120px;
     max-width: 320px;
     text-align: center;
   }
@@ -274,9 +316,40 @@
   }
 
   .center {
-    padding: 4rem 4rem 0rem;
+    padding: 0rem 2rem 0rem;
     flex-direction: column;
     text-align: center;
+    box-shadow: inset 0px -85px 55px 20px white;
+  }
+
+  .topBox {
+    display: block;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+  
+  .name {
+    font-size: 2.5rem;
+  }
+  .rightBox {
+    width: 650px;
+  }
+
+  .videoSection {
+    padding: 2rem;
+  }
+
+  .topBox {
+    position: relative;
+    top: 0;
+    width: 35vw;
+  }
+
+  .floatingButton {
+    bottom: 1rem;
+    right: 1rem;
   }
 
   .center::before {
@@ -343,6 +416,12 @@
   
   .name {
     font-size: 2.5rem;
+  }
+
+  .topBox {
+    position: relative;
+    top: 0;
+    width: 35vw;
   }
 
   .center {

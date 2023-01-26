@@ -258,7 +258,6 @@
 .floatingButton {
   display: flex;
   z-index: 10000;
-  height: 70px;
   padding: 0 15px;
   border-radius: 40px;
   background-color: #ffffff;
@@ -350,6 +349,11 @@
   .floatingButton {
     bottom: 1rem;
     right: 1rem;
+  }
+
+  .socialIcons {
+    height: 30px;
+    width: 30px;
   }
 
   .center::before {

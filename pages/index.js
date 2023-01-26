@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Bhajan Samrat</title>
+        <title>Jagran Samrat</title>
         <meta name="description" content="Dharmendra Pandey musician" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
@@ -23,7 +23,7 @@ export default function Home() {
           </div>
           <div className={styles.leftBox}>
             <h1 className={`${aboreto.className} ${styles.title}`}>
-              Bhajan Samrat{" "}
+              Jagran Samrat{" "}
             </h1>
             <h2 className={`${aboreto.className} ${styles.name}`}>
               Dharmendra Pandey
